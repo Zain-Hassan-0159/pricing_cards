@@ -1,0 +1,189 @@
+.d-none{
+    display: none !important;
+}
+
+.slidecontainer {
+    width: 100%;
+  }
+  
+.slider {
+    -webkit-appearance: none;
+    width: 100%;
+    height: 4px;
+    border-radius: 5px;
+    background: #979797;
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+}
+
+.slider:hover {
+    opacity: 1;
+}
+
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background: #F67408;
+    cursor: pointer;
+}
+  
+.slider::-moz-range-thumb {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background: #F67408;
+    cursor: pointer;
+}
+
+.card_outer{
+    font-family: 'Poppins', sans-serif;
+    background-color: #060B29;
+    padding: 40px;
+}
+
+.card_outer .card_inner{
+    padding: 40px;
+    background-color: white;
+    max-width: 1326px;
+    margin: auto;
+}
+
+.card_outer .row-1{
+    display: flex;
+    margin-bottom: 60px;
+}
+
+.card_outer .row-1 .left{
+    flex: 1;
+}
+
+.card_outer .row-1 .left h2{
+    font-family: inherit;
+    font-size: 25px;
+    font-weight: 700;
+    line-height: 30px;
+    letter-spacing: 0em;
+    text-align: left;
+    margin-bottom: 0;
+
+}
+
+.card_outer .row-1 .left span{
+    font-family: inherit;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0em;
+    text-align: left;
+    display: block;
+    margin-bottom: 20px;
+
+}
+
+.card_outer .row-1 .left a{
+    padding: 5px 40px;
+    background: #F67408;
+    border-radius: 10px;
+    display: inline-block;
+    font-family: inherit;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 30px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: white;
+    text-decoration: none;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+.card_outer .row-1 .right{
+    flex: 2;
+}
+
+.card_outer .top_text span{
+    font-family: inherit;
+    font-size: 25px;
+    font-weight: 400;
+    line-height: 38px;
+    letter-spacing: 0em;
+    text-align: left;
+    position: relative;
+}
+
+.card_outer .bottom_text{
+    margin-top: 10px;
+}
+
+.card_outer .bottom_text span{
+    font-family: inherit;
+    font-size: 25px;
+    font-weight: 700;
+    line-height: 38px;
+    letter-spacing: 0em;
+    text-align: left;
+    position: relative;
+}
+
+.card_outer .cards{
+    display: flex;
+}
+
+.card_outer .card{
+    max-width: 355px;
+    width: 100%;
+    margin: 10px 20px 10px 0;
+    min-height: 434px;
+    background: #F0F0F0;
+    border: 1px solid #F0F0F0;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 5px;
+    padding: 20px;
+}
+
+.card_outer .card b{
+    font-family: inherit;
+    font-size: 60px;
+    font-weight: 700;
+    line-height: 90px;
+    letter-spacing: 0em;
+    text-align: left;
+}
+
+.card_outer .card span{
+    font-family: inherit;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 30px;
+    letter-spacing: 0em;
+    text-align: left;
+}
+
+.card_outer .card .price{
+    float: right;
+}
+
+@media (max-width: 768px){
+    .card_outer .cards{
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .card_outer .card{
+        margin: 0;
+        margin-bottom: 20px;
+    }
+
+    .card_outer .row-1{
+        display: inherit;
+       
+    }
+
+    .card_outer .row-1 .left{
+        margin-bottom: 40px;
+    }
+}

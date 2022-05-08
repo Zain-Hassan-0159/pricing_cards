@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/style.css">
+    <title>Document</title>
+</head>
+<body>
+  <div class="card_outer">
+    <div class="card_inner">
+      <div class="row-1">
+        <div class="left">
+          <h2>Estimate your spend</h2>
+          <span>Tenant Pricing is based on volume</span>
+          <a id="signup_button" href="linktwo" data-zero="linkzero" data-one="linkone" data-two="linktwo" data-three="linkthree" data-four="linkfour" data-five="linkfive" data-sex="linksix" data-seven="linkseven">Sign Up</a>
+        </div>
+        <div class="right">
+          <div class="slidecontainer">
+            <div class="top_text">
+              <span id="range_top" >50</span>
+            </div>
+            <input type="range" min="0" max="520" value="100" class="slider" id="myRange">
+            <div class="bottom_text">
+              <span id="range_bottom">13/Month</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row-2">
+        <div class="cards">
+          <div class="card">
+            <span><b>30</b>/MO</span>
+            <p>WP-SaaS Development Suite</p>
+            <ul>
+              <li>WPCS CLI & API</li>
+              <li>Versioning Control</li>
+              <li>3 (test) Tenants</li>
+              <li>Manual & Automatic Backups</li>
+              <li>Unlimited Collaborators</li>
+              <li>One-Click Login</li>
+              <li>Datacenter of Choice (AWS)</li>
+            </ul>
+          </div>
+          <div class="card">
+            <span id="card_price" class="price">12-13$</span>
+            <div class="d-none all_same_content content_p_zero">
+              <span><b>zero</b></span>
+              <p>dummy text zero</p>
+              <ul>
+                <li>list zero</li>
+                <li>list zero</li>
+                <li>list zero</li>
+                <li>list zero</li>
+              </ul>
+            </div>
+            <div class="d-none all_same_content content_p_one">
+              <span><b>one</b></span>
+              <p>dummy text one</p>
+              <ul>
+                <li>list one</li>
+                <li>list one</li>
+                <li>list one</li>
+                <li>list one</li>
+              </ul>
+            </div>
+            <div class="all_same_content content_p_two">
+              <span><b>two</b></span>
+              <p>dummy text two</p>
+              <ul>
+                <li>list two</li>
+                <li>list two</li>
+                <li>list two</li>
+                <li>list two</li>
+              </ul>
+            </div>
+            <div class="d-none all_same_content content_p_three">
+              <span><b>three</b></span>
+              <p>dummy text three</p>
+              <ul>
+                <li>list three</li>
+                <li>list three</li>
+                <li>list three</li>
+                <li>list three</li>
+              </ul>
+            </div>
+            <div class="d-none all_same_content content_p_four">
+              <span><b>four</b></span>
+              <p>dummy text four</p>
+              <ul>
+                <li>list four</li>
+                <li>list four</li>
+                <li>list four</li>
+                <li>list four</li>
+              </ul>
+            </div>
+            <div class="d-none all_same_content content_p_five">
+              <span><b>five</b></span>
+              <p>dummy text five</p>
+              <ul>
+                <li>list five</li>
+                <li>list five</li>
+                <li>list five</li>
+                <li>list five</li>
+              </ul>
+            </div>
+            <div class="d-none all_same_content content_p_six">
+              <span><b>six</b></span>
+              <p>dummy text six</p>
+              <ul>
+                <li>list six</li>
+                <li>list six</li>
+                <li>list six</li>
+                <li>list six</li>
+              </ul>
+            </div>
+            <div class="d-none all_same_content content_p_seven">
+              <span><b>seven</b></span>
+              <p>dummy text seven</p>
+              <ul>
+                <li>list seven</li>
+                <li>list seven</li>
+                <li>list seven</li>
+                <li>list seven</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+    <script>
+        var slider = document.getElementById("myRange");
+        var output1 = document.getElementById("range_top");
+        var output2 = document.getElementById("range_bottom");
+        var buttonLink = document.getElementById("signup_button");
+        var cardPrice = document.getElementById("card_price");
+        var samecontent = document.querySelectorAll(".all_same_content");
+
+        if(slider.value > 430){
+          output2.style.left = (slider.value-15)/6+"%";
+          output1.style.left = (slider.value-7)/6+"%";
+          output1.innerText = slider.value;
+        }else{
+          output2.style.left = (slider.value)/6+"%";
+          output1.style.left = (slider.value)/6+"%";
+          output1.innerText = slider.value;
+        }
+        
+        slider.oninput = function() {
+          if(slider.value > 430){
+            output1.style.left = (this.value/6)-7+"%";
+            output2.style.left = (this.value/6)-15+"%";
+            output1.innerText = this.value;
+          }else{
+            output1.style.left = (this.value)/6+"%";
+            output2.style.left = (this.value)/6+"%";
+            output1.innerText = this.value;
+          }
+
+          if( 0 <= this.value && this.value < 50){
+            output2.innerText = "15/Month";
+            buttonLink.href = buttonLink.getAttribute("data-zero");
+            cardPrice.innerText = "14-15$";
+            samecontent.forEach(function(h){
+              h.classList.add("d-none");
+            });
+            document.querySelector(".content_p_zero").classList.remove("d-none");
+          }
+          if( 50 <= this.value && this.value < 100){
+            output2.innerText = "14/Month";
+            buttonLink.href = buttonLink.getAttribute("data-one");
+            cardPrice.innerText = "13-14$";
+            samecontent.forEach(function(h){
+              h.classList.add("d-none");
+            });
+            document.querySelector(".content_p_one").classList.remove("d-none");
+          }
+          if( 100 <= this.value && this.value < 200){
+            output2.innerText = "13/Month";
+            buttonLink.href = buttonLink.getAttribute("data-two");
+            cardPrice.innerText = "12-13$";
+            samecontent.forEach(function(h){
+              h.classList.add("d-none");
+            });
+            document.querySelector(".content_p_two").classList.remove("d-none");
+          }
+          if( 200 <= this.value && this.value < 300){
+            output2.innerText = "12/Month";
+            buttonLink.href = buttonLink.getAttribute("data-three");
+            cardPrice.innerText = "11-12$";
+            samecontent.forEach(function(h){
+              h.classList.add("d-none");
+            });
+            document.querySelector(".content_p_three").classList.remove("d-none");
+          }
+          if( 300 <= this.value && this.value < 400){
+            output2.innerText = "11/Month";
+            buttonLink.href = buttonLink.getAttribute("data-four");
+            cardPrice.innerText = "10-11$";
+            samecontent.forEach(function(h){
+              h.classList.add("d-none");
+            });
+            document.querySelector(".content_p_four").classList.remove("d-none");
+          }
+          if( 400 <= this.value && this.value < 500){
+            output2.innerText = "10/Month";
+            buttonLink.href = buttonLink.getAttribute("data-five");
+            cardPrice.innerText = "9-10$";
+            samecontent.forEach(function(h){
+              h.classList.add("d-none");
+            });
+            document.querySelector(".content_p_five").classList.remove("d-none");
+          }
+          if( 500 == this.value ){
+            output2.innerText = "9/Month";
+            buttonLink.href = buttonLink.getAttribute("data-six");
+            cardPrice.innerText = "10$";
+            samecontent.forEach(function(h){
+              h.classList.add("d-none");
+            });
+            document.querySelector(".content_p_six").classList.remove("d-none");
+          }
+          if( 500 < this.value ){
+            output2.innerText = "Contact Sales";
+            output1.innerText = "> 500";
+            buttonLink.innerText = "Contact Sales";
+            buttonLink.href = buttonLink.getAttribute("data-seven");
+            cardPrice.innerText = "Contact Sales";
+            samecontent.forEach(function(h){
+              h.classList.add("d-none");
+            });
+            document.querySelector(".content_p_seven").classList.remove("d-none");
+          }else{
+            buttonLink.innerText = "Sign Up";
+          }
+        }
+        </script>
+</body>
+</html>
